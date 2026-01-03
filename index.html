@@ -74,6 +74,18 @@
         letter-spacing: -0.5px;
         color: #0f172a;
       }
+      .cover-wrap {
+        display: flex;
+        justify-content: center;
+        margin: 14px 0 10px;
+      }
+      .cover-img {
+        width: 180px;
+        max-width: 60vw;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+      }
       .subtitle {
         color: var(--muted);
         font-weight: 500;
@@ -245,13 +257,28 @@
   </head>
   <body>
     <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-YOUR_ID_HERE" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-YOUR_ID_HERE"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe>
     </noscript>
 
     <div class="container">
       <header>
         <div class="pill">Book Execution Framework · MVP</div>
         <h1>Turn Books Into Decisions</h1>
+
+        <!-- Book cover inserted here -->
+        <div class="cover-wrap">
+          <img
+            class="cover-img"
+            src="https://m.media-amazon.com/images/I/71KLTWMGdrL._SL1500_.jpg"
+            alt="So Good They Can’t Ignore You book cover"
+          />
+        </div>
+
         <div class="subtitle">So Good They Can’t Ignore You — Cal Newport</div>
         <div class="hero-quote">
           “Follow your passion” is dangerous advice.<br />
@@ -261,13 +288,19 @@
 
       <section class="section">
         <h2>Why this book, now?</h2>
-        <p>Most people believe that if they find their passion, success will follow. But years of research — and real careers — show the opposite.</p>
+        <p>
+          Most people believe that if they find their passion, success will follow. But years of research — and real
+          careers — show the opposite.
+        </p>
         <div class="highlight-box">
           This book challenges a dangerous myth:<br />
           <strong>“Do what you love” → often leads to burnout & confusion.</strong><br />
           <strong>“Become valuable” → leads to freedom, meaning, & control.</strong>
         </div>
-        <p>If you want more autonomy and work that actually matters, you need a roadmap to build <strong>Career Capital</strong>.</p>
+        <p>
+          If you want more autonomy and work that actually matters, you need a roadmap to build
+          <strong>Career Capital</strong>.
+        </p>
       </section>
 
       <section class="section" data-book-id="BK-001" data-category="Business">
@@ -296,15 +329,29 @@
         <div class="form-title">Your Execution Frame</div>
         <div class="form-group">
           <label for="input-skill">My Core Skill (for the next 12 months)</label>
-          <input type="text" id="input-skill" placeholder="e.g., Data Analysis with Python" onfocus="trackFocus('skill')" />
+          <input
+            type="text"
+            id="input-skill"
+            placeholder="e.g., Data Analysis with Python"
+            onfocus="trackFocus('skill')"
+          />
         </div>
         <div class="form-group">
           <label for="input-weakness">The weakest part of this skill</label>
-          <input type="text" id="input-weakness" placeholder="e.g., Visualization with Tableau" onfocus="trackFocus('weakness')" />
+          <input
+            type="text"
+            id="input-weakness"
+            placeholder="e.g., Visualization with Tableau"
+            onfocus="trackFocus('weakness')"
+          />
         </div>
         <div class="form-group">
           <label for="input-practice">This week’s deliberate practice (30–60 min)</label>
-          <textarea id="input-practice" placeholder="e.g., Replicate one dashboard from Gallery..." onfocus="trackFocus('practice')"></textarea>
+          <textarea
+            id="input-practice"
+            placeholder="e.g., Replicate one dashboard from Gallery..."
+            onfocus="trackFocus('practice')"
+          ></textarea>
         </div>
       </section>
 
@@ -331,7 +378,9 @@
         <p>Progress doesn’t come from inspiration. It comes from tracking.</p>
         <button class="btn-primary" id="btn-save" onclick="saveFrame()">Save My Frame</button>
         <div class="options">
-          <label><input type="checkbox" id="chk-reminder" onchange="trackOptIn('reminder')" /> Email me in 7 days</label>
+          <label
+            ><input type="checkbox" id="chk-reminder" onchange="trackOptIn('reminder')" /> Email me in 7 days</label
+          >
           <label><input type="checkbox" id="chk-export" onchange="trackOptIn('export')" /> Export PDF</label>
         </div>
       </div>
